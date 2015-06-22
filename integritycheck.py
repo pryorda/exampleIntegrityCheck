@@ -46,6 +46,8 @@ def hashfile(afile, hasher, blocksize=65536):
 
 def createbaseline():
     #Create Baseline
+    # Clear the baseline before building
+    base.clear():
     for path, dirs, files in os.walk(dir_to_check):
       for sub_path, dirs, files in os.walk(path):
         if not re.match(exclude, sub_path):
